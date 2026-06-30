@@ -10,18 +10,9 @@ private enum EditorTarget: Identifiable {
 
 struct BuzzlieApp: View {
     @ObservedObject var vm: BuzzlieViewModel
-    @State private var tab: Tab = Self.initialTab()
+    @State private var tab: Tab = .rappels
     @State private var connectOpen = false
     @State private var editorFor: EditorTarget?
-
-    private static func initialTab() -> Tab {
-        #if DEBUG
-        let args = ProcessInfo.processInfo.arguments
-        if args.contains("-uiTab=bracelet") { return .bracelet }
-        if args.contains("-uiTab=debug") { return .debug }
-        #endif
-        return .rappels
-    }
 
     var body: some View {
         TabView(selection: $tab) {
@@ -51,11 +42,6 @@ struct BuzzlieApp: View {
             #endif
         }
         .tint(BzColor.primary)
-        .onAppear {
-            #if DEBUG
-            if ProcessInfo.processInfo.arguments.contains("-uiSheet=editor") { editorFor = .new }
-            #endif
-        }
         .onChange(of: vm.connState) { _, newValue in
             if newValue == .ready { connectOpen = false }
         }

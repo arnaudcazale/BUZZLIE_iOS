@@ -39,26 +39,9 @@ final class BuzzlieViewModel: ObservableObject {
 
     init() {
         settings = pruneExpired(store.load())
-        #if DEBUG
-        seedPreviewIfRequested()
-        #endif
         bind()
         startPruneLoop()
     }
-
-    #if DEBUG
-    /// In-memory sample data for UI screenshots (not persisted). Enabled with `-uiSeed`.
-    private func seedPreviewIfRequested() {
-        guard ProcessInfo.processInfo.arguments.contains("-uiSeed") else { return }
-        var medMatin = ReminderUi(); medMatin.label = "Médoc matin"; medMatin.mode = .ABSOLUTE
-        medMatin.hour = 8; medMatin.minute = 0; medMatin.dayMask = ALL_DAYS
-        var medSemaine = ReminderUi(); medSemaine.label = "Médoc midi"; medSemaine.mode = .ABSOLUTE
-        medSemaine.hour = 12; medSemaine.minute = 30; medSemaine.dayMask = 0x1F
-        var patch = ReminderUi(); patch.label = "Patch Cassie"; patch.mode = .RELATIVE
-        patch.delayMinutes = 210; patch.anchorEpoch = Time.nowSeconds()
-        settings.reminders = [medMatin, medSemaine, patch]
-    }
-    #endif
 
     private func bind() {
         manager.$status.assign(to: &$status)
