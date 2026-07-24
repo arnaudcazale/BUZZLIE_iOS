@@ -24,9 +24,12 @@ func resolveSteps(_ intensity: VibrationPreset, _ continuous: Bool, _ durationSe
     if continuous {
         step = HapticStep(onMs: 1000, offMs: 0, effectId: 0, totalDurationMs: duration)
     } else {
+        // ON >= 500 ms obligatoire : sous ~300 ms le spin-up du LRA (re-verrouillage
+        // auto-resonance) mange le burst, ressenti quasi nul (constate au poignet
+        // 2026-07-24). La douceur vient de l'espacement (OFF long), pas de ON courts.
         let on: Int, off: Int
         switch intensity {
-        case .DOUCE: (on, off) = (300, 700)
+        case .DOUCE: (on, off) = (500, 1200)
         case .STANDARD: (on, off) = (500, 500)
         case .FORTE: (on, off) = (700, 300)
         }
