@@ -122,7 +122,15 @@ struct ReminderEditorSheet: View {
             Spacer()
             Button("Enregistrer") {
                 var toSave = draft
-                if toSave.mode == .RELATIVE { toSave.anchorEpoch = Time.nowSeconds() }
+                // Figer la cible au save : anchor pour RELATIVE, date pour une one-shot
+                // ABSOLUTE (sinon elle "glisse" à J+1 chaque jour et n'expire jamais).
+                if toSave.mode == .RELATIVE {
+                    toSave.anchorEpoch = Time.nowSeconds()
+                } else if !toSave.repeats {
+                    toSave.targetEpochFixed = Time.nextOccurrence(toSave.hour, toSave.minute)
+                } else {
+                    toSave.targetEpochFixed = 0
+                }
                 if isNew { vm.addReminder(toSave) } else { vm.updateReminder(toSave) }
                 onDismiss()
             }

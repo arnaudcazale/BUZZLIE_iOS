@@ -29,6 +29,7 @@ struct ReminderUi: Codable, Identifiable, Equatable {
     var minute: Int = 0             // ABSOLUTE
     var dayMask: Int = 0            // repeat days (bit0=Mon..bit6=Sun) ; 0 = one-shot
     var anchorEpoch: Int64 = 0     // RELATIVE: set-time, so the target is fixed (not sliding)
+    var targetEpochFixed: Int64 = 0 // ABSOLUTE one-shot: target date frozen at save (0 = legacy, recompute)
     var enabled: Bool = true
 
     /// True if the reminder repeats (at least one selected day).
@@ -38,7 +39,11 @@ struct ReminderUi: Codable, Identifiable, Equatable {
     func targetEpoch(_ now: Int64) -> Int64 {
         switch mode {
         case .RELATIVE: return anchorEpoch + Int64(delayMinutes) * 60
-        case .ABSOLUTE: return Time.nextOccurrenceOnDays(hour, minute, dayMask)
+        // One-shot : date figée au save — sans elle, "prochaine occurrence" glisse à J+1
+        // chaque jour et isExpired() ne devient jamais vrai (alarme fantôme éternelle).
+        case .ABSOLUTE:
+            if !repeats && targetEpochFixed != 0 { return targetEpochFixed }
+            return Time.nextOccurrenceOnDays(hour, minute, dayMask)
         }
     }
 
@@ -69,5 +74,24 @@ struct ReminderUi: Codable, Identifiable, Equatable {
         case h > 0: return "\(h) h"
         default: return "\(m) min"
         }
+    }
+}
+
+extension ReminderUi {
+    /// Décodage tolérant : le Codable synthétisé lève keyNotFound sur un champ absent,
+    /// et load() repartirait alors d'un AppSettings vierge (perte de tous les rappels).
+    /// Indispensable pour les JSON enregistrés avant l'ajout de targetEpochFixed.
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decodeIfPresent(String.self, forKey: .id) ?? UUID().uuidString
+        label = try c.decodeIfPresent(String.self, forKey: .label) ?? ""
+        mode = try c.decodeIfPresent(ScheduleMode.self, forKey: .mode) ?? .ABSOLUTE
+        delayMinutes = try c.decodeIfPresent(Int.self, forKey: .delayMinutes) ?? 210
+        hour = try c.decodeIfPresent(Int.self, forKey: .hour) ?? 8
+        minute = try c.decodeIfPresent(Int.self, forKey: .minute) ?? 0
+        dayMask = try c.decodeIfPresent(Int.self, forKey: .dayMask) ?? 0
+        anchorEpoch = try c.decodeIfPresent(Int64.self, forKey: .anchorEpoch) ?? 0
+        targetEpochFixed = try c.decodeIfPresent(Int64.self, forKey: .targetEpochFixed) ?? 0
+        enabled = try c.decodeIfPresent(Bool.self, forKey: .enabled) ?? true
     }
 }

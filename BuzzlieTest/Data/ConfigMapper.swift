@@ -33,7 +33,10 @@ extension Reminder {
     /// Represented as ABSOLUTE at the device epoch's local wall-clock time; repeat mask kept.
     func toReminderUi(_ now: Int64) -> ReminderUi {
         let (h, m) = Time.hourMinuteOf(epochSeconds)
-        return ReminderUi(mode: .ABSOLUTE, hour: h, minute: m, dayMask: dayMask, enabled: true)
+        // One-shot : conserver la date du bracelet, sinon l'import la rend "glissante".
+        return ReminderUi(mode: .ABSOLUTE, hour: h, minute: m, dayMask: dayMask,
+                          targetEpochFixed: dayMask & ALL_DAYS == 0 ? epochSeconds : 0,
+                          enabled: true)
     }
 }
 
