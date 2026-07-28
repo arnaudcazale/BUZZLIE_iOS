@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 private enum Tab: Hashable { case rappels, bracelet, debug }
 
@@ -13,6 +14,16 @@ struct BuzzlieApp: View {
     @State private var tab: Tab = .rappels
     @State private var connectOpen = false
     @State private var editorFor: EditorTarget?
+
+    init(vm: BuzzlieViewModel) {
+        self.vm = vm
+        // Avec 2 onglets, UITabBar les etale aux extremites (25 %/75 %) :
+        // items resserres vers le centre, comme la NavigationBar Android
+        // (fillMaxWidth(0.62f) centree).
+        UITabBar.appearance().itemPositioning = .centered
+        UITabBar.appearance().itemWidth = 120
+        UITabBar.appearance().itemSpacing = 24
+    }
 
     var body: some View {
         TabView(selection: $tab) {
