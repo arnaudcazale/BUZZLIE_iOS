@@ -233,6 +233,15 @@ final class BuzzlieViewModel: ObservableObject {
             do {
                 let now = Time.nowSeconds()
                 let device = await self.manager.readSchedule()
+                if device == nil && self.manager.supportsScheduleReadback {
+                    // Le bracelet expose B005 mais la lecture a echoue : pousser la
+                    // config locale pourrait EFFACER ses alarmes (constate QA Android
+                    // 28/07). On sync juste l'heure (sans risque) et on signale.
+                    self.logMsg(.error, "Bracelet illisible — config NON poussee (protection)")
+                    try await self.manager.syncTime(now)
+                    self.configSynced = false
+                    return
+                }
                 let merged = mergeSchedule(self.settings.reminders, device, now)
                 let imported = merged.count - self.settings.reminders.count
                 if imported > 0 {
