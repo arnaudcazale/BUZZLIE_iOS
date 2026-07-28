@@ -37,3 +37,21 @@ func resolveSteps(_ intensity: VibrationPreset, _ continuous: Bool, _ durationSe
     }
     return [step]
 }
+
+/// Inverse de resolveSteps : re-derive (intensite?, continu, duree s) depuis le step
+/// lu sur le bracelet (blob 0xB005). Intensite nil = motif inconnu, on garde alors
+/// celle de l'app (mais on adopte quand meme continuite et duree).
+func vibrationFromStep(_ step: HapticStep) -> (VibrationPreset?, Bool, Int) {
+    let durationSec = min(max(step.totalDurationMs / 1000,
+                              BuzzlieGatt.alarmDurationSRange.lowerBound),
+                          BuzzlieGatt.alarmDurationSRange.upperBound)
+    if step.offMs == 0 { return (nil, true, durationSec) }
+    let preset: VibrationPreset?
+    switch (step.onMs, step.offMs) {
+    case (500, 1200): preset = .DOUCE
+    case (500, 500):  preset = .STANDARD
+    case (700, 300):  preset = .FORTE
+    default:          preset = nil
+    }
+    return (preset, false, durationSec)
+}

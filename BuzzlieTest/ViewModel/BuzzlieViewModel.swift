@@ -185,15 +185,24 @@ final class BuzzlieViewModel: ObservableObject {
     }
 
     func setVibration(_ intensity: VibrationPreset, _ continuous: Bool) {
-        mutateSettings { $0.intensity = intensity; $0.continuous = continuous }
+        mutateSettings { $0.intensity = intensity; $0.continuous = continuous; $0.vibrationDirty = true }
     }
 
     func setAlarmDuration(_ sec: Int) {
         let clamped = min(max(sec, BuzzlieGatt.alarmDurationSRange.lowerBound), BuzzlieGatt.alarmDurationSRange.upperBound)
-        mutateSettings { $0.alarmDurationSec = clamped }
+        mutateSettings { $0.alarmDurationSec = clamped; $0.vibrationDirty = true }
     }
 
     func reminderById(_ id: String?) -> ReminderUi? { settings.reminders.first { $0.id == id } }
+
+    /// Push reussi : le bracelet reflete l'app -> plus de modif locale en attente.
+    private func clearVibrationDirty() {
+        guard settings.vibrationDirty ?? false else { return }
+        var next = settings
+        next.vibrationDirty = false
+        settings = next
+        store.save(next)
+    }
 
     private func mutateSettings(_ transform: (inout AppSettings) -> Void) {
         var next = settings
@@ -218,6 +227,7 @@ final class BuzzlieViewModel: ObservableObject {
                 self.draft = d
                 try await self.manager.writeConfig(try ConfigCodec.encodeConfig(d))
                 self.configSynced = true
+                self.clearVibrationDirty()
             } catch {
                 self.configSynced = false
                 self.logMsg(.error, "Config: \(error)")
@@ -252,11 +262,29 @@ final class BuzzlieViewModel: ObservableObject {
                     self.importedFromDevice = imported
                     self.logMsg(.op, "\(imported) alarme(s) recuperee(s) du bracelet")
                 }
+
+                // Reglages vibration : le bracelet fait foi a la connexion, SAUF si
+                // l'utilisateur les a modifies hors connexion (dirty -> sa valeur part).
+                if !(self.settings.vibrationDirty ?? false), let step = device?.steps.first {
+                    let (preset, cont, dur) = vibrationFromStep(step)
+                    var adopted = self.settings
+                    adopted.intensity = preset ?? adopted.intensity
+                    adopted.continuous = cont
+                    adopted.alarmDurationSec = dur
+                    if adopted != self.settings {
+                        self.settings = adopted
+                        self.store.save(adopted)
+                        self.logMsg(.op, "Vibration adoptee du bracelet : "
+                            + (cont ? "continu" : (preset?.label ?? "motif inconnu")) + ", \(dur) s")
+                    }
+                }
+
                 try await self.manager.syncTime(now)
                 let d = self.settings.toConfigDraft(Time.nowSeconds())
                 self.draft = d
                 try await self.manager.writeConfig(try ConfigCodec.encodeConfig(d))
                 self.configSynced = true
+                self.clearVibrationDirty()
             } catch {
                 self.configSynced = false
                 self.logMsg(.error, "Auto-sync/config: \(error)")
