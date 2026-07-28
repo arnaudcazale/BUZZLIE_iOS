@@ -33,7 +33,10 @@ struct BuzzlieApp: View {
             .tabItem { Label("Bracelet", systemImage: "applewatch") }
             .tag(Tab.bracelet)
 
-            #if DEBUG
+            // Onglet Debug masqué par défaut (même en build Debug), comme Android
+            // (flag SHOW_DEBUG_TAB). Pour le réactiver : ajouter SHOW_DEBUG_TAB aux
+            // Active Compilation Conditions de la cible dans Xcode.
+            #if SHOW_DEBUG_TAB
             NavigationStack {
                 DebugScreen(vm: vm, onConnect: { connectOpen = true })
             }
