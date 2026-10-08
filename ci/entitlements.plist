@@ -2,13 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>method</key>
-	<string>app-store-connect</string>
-	<key>destination</key>
-	<string>upload</string>
-	<key>teamID</key>
+	<key>application-identifier</key>
+	<string>9TDJ3889AZ.com.buzzlie.app</string>
+	<key>com.apple.developer.team-identifier</key>
 	<string>9TDJ3889AZ</string>
-	<key>signingStyle</key>
-	<string>automatic</string>
+	<key>beta-reports-active</key>
+	<true/>
+	<key>get-task-allow</key>
+	<false/>
 </dict>
 </plist>
