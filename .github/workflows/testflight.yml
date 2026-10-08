@@ -17,12 +17,13 @@ jobs:
     env:
       ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
       ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
-      KEYCHAIN: ${{ runner.temp }}/signing.keychain-db
     steps:
       - uses: actions/checkout@v4
 
       - name: Xcode
-        run: xcodebuild -version
+        run: |
+          xcodebuild -version
+          echo "KEYCHAIN=$RUNNER_TEMP/signing.keychain-db" >> "$GITHUB_ENV"
 
       # Archive non signée : l'équipe n'a aucun appareil enregistré, donc pas de profil de
       # développement possible. La signature de distribution se fait à l'étape suivante.
