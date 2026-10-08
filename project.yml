@@ -9,7 +9,7 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.0"
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: 9TDJ3889AZ
     CODE_SIGN_STYLE: Automatic
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
@@ -22,12 +22,14 @@ targets:
       - path: BuzzlieTest
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.buzzlie.testapp
-        INFOPLIST_KEY_CFBundleDisplayName: BUZZLIE Test
+        PRODUCT_BUNDLE_IDENTIFIER: com.buzzlie.app
+        INFOPLIST_KEY_CFBundleDisplayName: BUZZLIE
         INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: "YES"
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        TARGETED_DEVICE_FAMILY: "1"
         INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription: "BUZZLIE utilise le Bluetooth pour communiquer avec votre bracelet."
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: "NO"
         GENERATE_INFOPLIST_FILE: "YES"
 
   BuzzlieTestTests:
@@ -39,7 +41,7 @@ targets:
       - target: BuzzlieTest
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.buzzlie.testapp.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.buzzlie.app.tests
         GENERATE_INFOPLIST_FILE: "YES"
 
 schemes:

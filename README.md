@@ -42,7 +42,8 @@ français, accent teal. Découpage miroir :
 ## Build
 
 Projet généré par **XcodeGen** (`brew install xcodegen` puis `xcodegen generate`) depuis
-`project.yml` — le `.xcodeproj` n'est pas versionné (régénérable). Cible **iOS 17**, Xcode 16,
+`project.yml` — le `.xcodeproj` est versionné (requis par Xcode Cloud) : après toute modification
+de `project.yml`, relancer `xcodegen generate` et commiter le projet. Cible **iOS 17**, Xcode 16,
 mode langage Swift 5. Le BLE (CoreBluetooth) ne tourne **pas** sur simulateur → tester sur iPhone
 physique. Tests codec : `xcodebuild -scheme BuzzlieTest test` (vérifie l'octet exact du blob).
 

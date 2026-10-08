@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05911083325B3B2E7357788C /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AF5B161AF0095132B338F8 /* EmptyState.swift */; };
+		139CB28941C1AE0B8F74EBCD /* LogConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9121C9580BF20551FB9096 /* LogConsole.swift */; };
+		16A3642FE11C3E00943EF35F /* ReminderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8AF02656CA2FD7CAD407A /* ReminderCard.swift */; };
+		1DFA0A3F59898C02933D6A0E /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A14DFF80DFF4D7641BC5C /* SegmentedControl.swift */; };
+		20C90530848E7040488424BF /* StatusChips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12D04CBD08614CAEC882B21 /* StatusChips.swift */; };
+		278FEEC00537909B66913A3A /* BleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1DB6D22589A3B3D8A07BB /* BleModels.swift */; };
+		30914E322612C204D7D8CE32 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E99CA1AFFE788D830B24A3 /* AppSettings.swift */; };
+		30EBEE4574CD52226673D4F4 /* ConfigMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0817CA251FA20BF57D2FF /* ConfigMapper.swift */; };
+		32F315D10329830BCD6CBB61 /* BuzzlieBleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40C3737589FF8F1AC1D19F /* BuzzlieBleManager.swift */; };
+		378B62BDD78285F0EDAC822E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EDD88D0AE7F9E073541ADAB /* Assets.xcassets */; };
+		3AD11F84D79A0E566AA99703 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65395735ED9D01381A86BD /* Metrics.swift */; };
+		3C4DE82F926A91F5BEB266D9 /* RappelsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E81F47361755C09BC08240 /* RappelsScreen.swift */; };
+		44BEE7D1673886B0E6CA8F01 /* InsetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695DCC15450D7E8F87CE1A5 /* InsetGroup.swift */; };
+		49ED0F631AF7E9FC8FA59C8E /* DayOfWeekPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69071FCA7583B249867EE623 /* DayOfWeekPicker.swift */; };
+		4EFEEF56365D45C8AA68A587 /* BuzzlieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6403EEA1F98AC75F221E46 /* BuzzlieViewModel.swift */; };
+		503FF37914EF04F933C6E65A /* ConfigCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB796B367CC5EA449D67ED9B /* ConfigCodec.swift */; };
+		58053D21524B307831260A01 /* ReminderUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788B754EA95C095DC5E314F7 /* ReminderUi.swift */; };
+		5CF12A3ACE3BBD9F37363636 /* ConnectSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC474AC3D6252120E530B5 /* ConnectSheet.swift */; };
+		6DCEB6FD9ED131B8AECE622E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E2E6C1FD941F4E7B38A9D0 /* Colors.swift */; };
+		6F07153DFBE42E0DB6F39C1C /* ConnectionBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304EE30F42ED40857C2EED8 /* ConnectionBanner.swift */; };
+		7A5A88F476241E4DB26A7DC7 /* BatteryRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460A43AEEE5D993095755AE /* BatteryRing.swift */; };
+		813F9172DB4C4A082FDDB35E /* ReminderEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC708B638B751DB2FAD3D5D1 /* ReminderEditorSheet.swift */; };
+		83C574C084BC608240F7F514 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E041D1059124267D5D0BC61 /* Time.swift */; };
+		92AA42259A15F4C89BB6ED79 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232F30BD4ED31048CFCF18F7 /* Banner.swift */; };
+		95AB30786B3E47A0B238776C /* ConfigCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26BC0B895665B59D9E564C /* ConfigCodecTests.swift */; };
+		95D22A7EC9EDC9A7E3EEBBFD /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD44BC3D1BF45D28391386 /* ReminderStore.swift */; };
+		9B90F9B4F46A16C2FC8CE202 /* BuzzlieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA322E3E7295EFAFA4F5155F /* BuzzlieApp.swift */; };
+		9CDE79A8A5657078A1366511 /* ConfigMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4FEEF358DAD733DACF30F6 /* ConfigMapperTests.swift */; };
+		A7F75C00EDE676CE0FEA6CA6 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA457827E47BEE85336641A /* Typography.swift */; };
+		B189439CEA3D1660469B3AF8 /* BraceletScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E79FAD9A695D3DC35EC79 /* BraceletScreen.swift */; };
+		B8ED8A9E882834FF0E8B75AB /* ScreenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C173C71E1F5676B4C31E9AD /* ScreenHeader.swift */; };
+		CB89CC1D4861EC5016A0356A /* ScreenScaffold.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA204F8E1D6EB8E58F9482 /* ScreenScaffold.swift */; };
+		CD476F3D81E3CDEAC045FA66 /* BuzzlieGatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE3D8793297CA5EE663756 /* BuzzlieGatt.swift */; };
+		CFFDD5986690E809736B9D4F /* DurationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6617BA8C01D4F3003AC0F29 /* DurationSlider.swift */; };
+		E4123380E90B0B9EE82D6D25 /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4E498E0A0A732DE176E338 /* WheelPicker.swift */; };
+		ECE0B1E432BBB617750B6EAE /* BuzzlieTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F1F68BFF9CC9E29340C93 /* BuzzlieTestApp.swift */; };
+		EF5A577DCEF4A5FC70B1D480 /* DebugScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15800493D8B948231CAD4C9 /* DebugScreen.swift */; };
+		F3B028C64F69068E6C4852FA /* VibrationPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577923D5B6AC8F7E18090CC /* VibrationPreset.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C88B1B183A19B962475D51A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A722A2E140DD26C0453841 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10436564583487A487D14FDB;
+			remoteInfo = BuzzlieTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		061A14DFF80DFF4D7641BC5C /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		09CDB6ACEFA0C39DF1072853 /* BuzzlieTest.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BuzzlieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6403EEA1F98AC75F221E46 /* BuzzlieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzlieViewModel.swift; sourceTree = "<group>"; };
+		0A9121C9580BF20551FB9096 /* LogConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsole.swift; sourceTree = "<group>"; };
+		0DA457827E47BEE85336641A /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		1731568550354AB187C2E676 /* BuzzlieTestTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BuzzlieTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		232F30BD4ED31048CFCF18F7 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		2A65395735ED9D01381A86BD /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
+		3C173C71E1F5676B4C31E9AD /* ScreenHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHeader.swift; sourceTree = "<group>"; };
+		40C0817CA251FA20BF57D2FF /* ConfigMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigMapper.swift; sourceTree = "<group>"; };
+		4EDD88D0AE7F9E073541ADAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EF1DB6D22589A3B3D8A07BB /* BleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleModels.swift; sourceTree = "<group>"; };
+		4F26BC0B895665B59D9E564C /* ConfigCodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigCodecTests.swift; sourceTree = "<group>"; };
+		5E4E498E0A0A732DE176E338 /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
+		6577923D5B6AC8F7E18090CC /* VibrationPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationPreset.swift; sourceTree = "<group>"; };
+		69071FCA7583B249867EE623 /* DayOfWeekPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekPicker.swift; sourceTree = "<group>"; };
+		71E2E6C1FD941F4E7B38A9D0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		77F8AF02656CA2FD7CAD407A /* ReminderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCard.swift; sourceTree = "<group>"; };
+		788B754EA95C095DC5E314F7 /* ReminderUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderUi.swift; sourceTree = "<group>"; };
+		80AF5B161AF0095132B338F8 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		859E79FAD9A695D3DC35EC79 /* BraceletScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletScreen.swift; sourceTree = "<group>"; };
+		9460A43AEEE5D993095755AE /* BatteryRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryRing.swift; sourceTree = "<group>"; };
+		9695DCC15450D7E8F87CE1A5 /* InsetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroup.swift; sourceTree = "<group>"; };
+		9E041D1059124267D5D0BC61 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		A12D04CBD08614CAEC882B21 /* StatusChips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusChips.swift; sourceTree = "<group>"; };
+		A15800493D8B948231CAD4C9 /* DebugScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScreen.swift; sourceTree = "<group>"; };
+		A6617BA8C01D4F3003AC0F29 /* DurationSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSlider.swift; sourceTree = "<group>"; };
+		A8E81F47361755C09BC08240 /* RappelsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappelsScreen.swift; sourceTree = "<group>"; };
+		AAAD44BC3D1BF45D28391386 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		AB4FEEF358DAD733DACF30F6 /* ConfigMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigMapperTests.swift; sourceTree = "<group>"; };
+		B3EC474AC3D6252120E530B5 /* ConnectSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectSheet.swift; sourceTree = "<group>"; };
+		C75F1F68BFF9CC9E29340C93 /* BuzzlieTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzlieTestApp.swift; sourceTree = "<group>"; };
+		CA322E3E7295EFAFA4F5155F /* BuzzlieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzlieApp.swift; sourceTree = "<group>"; };
+		E6E99CA1AFFE788D830B24A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		EB796B367CC5EA449D67ED9B /* ConfigCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigCodec.swift; sourceTree = "<group>"; };
+		EBDA204F8E1D6EB8E58F9482 /* ScreenScaffold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenScaffold.swift; sourceTree = "<group>"; };
+		EC40C3737589FF8F1AC1D19F /* BuzzlieBleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzlieBleManager.swift; sourceTree = "<group>"; };
+		EECE3D8793297CA5EE663756 /* BuzzlieGatt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzlieGatt.swift; sourceTree = "<group>"; };
+		F304EE30F42ED40857C2EED8 /* ConnectionBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionBanner.swift; sourceTree = "<group>"; };
+		FC708B638B751DB2FAD3D5D1 /* ReminderEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditorSheet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		02A20EF240E9B7B4F7E8BEC1 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				4EF1DB6D22589A3B3D8A07BB /* BleModels.swift */,
+				EC40C3737589FF8F1AC1D19F /* BuzzlieBleManager.swift */,
+				EECE3D8793297CA5EE663756 /* BuzzlieGatt.swift */,
+				EB796B367CC5EA449D67ED9B /* ConfigCodec.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		38A28519BD5EA742AD02ED06 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				859E79FAD9A695D3DC35EC79 /* BraceletScreen.swift */,
+				CA322E3E7295EFAFA4F5155F /* BuzzlieApp.swift */,
+				A15800493D8B948231CAD4C9 /* DebugScreen.swift */,
+				0A9121C9580BF20551FB9096 /* LogConsole.swift */,
+				A8E81F47361755C09BC08240 /* RappelsScreen.swift */,
+				FC708B638B751DB2FAD3D5D1 /* ReminderEditorSheet.swift */,
+				EBDA204F8E1D6EB8E58F9482 /* ScreenScaffold.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		42924B199C659C1C2CD16143 /* BuzzlieTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F26BC0B895665B59D9E564C /* ConfigCodecTests.swift */,
+				AB4FEEF358DAD733DACF30F6 /* ConfigMapperTests.swift */,
+			);
+			path = BuzzlieTestTests;
+			sourceTree = "<group>";
+		};
+		5ACDA9541FBE861C3402FB6C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C75F1F68BFF9CC9E29340C93 /* BuzzlieTestApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5AFE8E95735C14FA5C7DEEE1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A6403EEA1F98AC75F221E46 /* BuzzlieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DCBDEC82F84FF6D7DA7402D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09CDB6ACEFA0C39DF1072853 /* BuzzlieTest.app */,
+				1731568550354AB187C2E676 /* BuzzlieTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E65428682D2D4D373925F22 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E6E99CA1AFFE788D830B24A3 /* AppSettings.swift */,
+				40C0817CA251FA20BF57D2FF /* ConfigMapper.swift */,
+				AAAD44BC3D1BF45D28391386 /* ReminderStore.swift */,
+				788B754EA95C095DC5E314F7 /* ReminderUi.swift */,
+				9E041D1059124267D5D0BC61 /* Time.swift */,
+				6577923D5B6AC8F7E18090CC /* VibrationPreset.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6EDAC49C62A98F55217FB749 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				71E2E6C1FD941F4E7B38A9D0 /* Colors.swift */,
+				2A65395735ED9D01381A86BD /* Metrics.swift */,
+				0DA457827E47BEE85336641A /* Typography.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		788C30B24217FC6750E4D95A = {
+			isa = PBXGroup;
+			children = (
+				E1E167CDD15778E12E7E72C0 /* BuzzlieTest */,
+				42924B199C659C1C2CD16143 /* BuzzlieTestTests */,
+				5DCBDEC82F84FF6D7DA7402D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB07458CC2C294DBDF3EB1B6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E20F842D85DC6E942FBFCEFA /* Components */,
+				38A28519BD5EA742AD02ED06 /* Screens */,
+				6EDAC49C62A98F55217FB749 /* Theme */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E1E167CDD15778E12E7E72C0 /* BuzzlieTest */ = {
+			isa = PBXGroup;
+			children = (
+				4EDD88D0AE7F9E073541ADAB /* Assets.xcassets */,
+				5ACDA9541FBE861C3402FB6C /* App */,
+				02A20EF240E9B7B4F7E8BEC1 /* BLE */,
+				5E65428682D2D4D373925F22 /* Data */,
+				DB07458CC2C294DBDF3EB1B6 /* UI */,
+				5AFE8E95735C14FA5C7DEEE1 /* ViewModel */,
+			);
+			path = BuzzlieTest;
+			sourceTree = "<group>";
+		};
+		E20F842D85DC6E942FBFCEFA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				232F30BD4ED31048CFCF18F7 /* Banner.swift */,
+				9460A43AEEE5D993095755AE /* BatteryRing.swift */,
+				F304EE30F42ED40857C2EED8 /* ConnectionBanner.swift */,
+				B3EC474AC3D6252120E530B5 /* ConnectSheet.swift */,
+				69071FCA7583B249867EE623 /* DayOfWeekPicker.swift */,
+				A6617BA8C01D4F3003AC0F29 /* DurationSlider.swift */,
+				80AF5B161AF0095132B338F8 /* EmptyState.swift */,
+				9695DCC15450D7E8F87CE1A5 /* InsetGroup.swift */,
+				77F8AF02656CA2FD7CAD407A /* ReminderCard.swift */,
+				3C173C71E1F5676B4C31E9AD /* ScreenHeader.swift */,
+				061A14DFF80DFF4D7641BC5C /* SegmentedControl.swift */,
+				A12D04CBD08614CAEC882B21 /* StatusChips.swift */,
+				5E4E498E0A0A732DE176E338 /* WheelPicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10436564583487A487D14FDB /* BuzzlieTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 010EBFB4AE28F9C66757DD21 /* Build configuration list for PBXNativeTarget "BuzzlieTest" */;
+			buildPhases = (
+				D8D4C96BD8431EE3172903EE /* Sources */,
+				4E7FDDE19C2B2FF3D7DDE524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuzzlieTest;
+			packageProductDependencies = (
+			);
+			productName = BuzzlieTest;
+			productReference = 09CDB6ACEFA0C39DF1072853 /* BuzzlieTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB4C54B621123C49F16AB2A4 /* BuzzlieTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF85B214F0BF9AE67C9AC0A3 /* Build configuration list for PBXNativeTarget "BuzzlieTestTests" */;
+			buildPhases = (
+				B4249748E4C5B48F6AFB7797 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A4E6DB0ED96CDF19A8D84C5 /* PBXTargetDependency */,
+			);
+			name = BuzzlieTestTests;
+			packageProductDependencies = (
+			);
+			productName = BuzzlieTestTests;
+			productReference = 1731568550354AB187C2E676 /* BuzzlieTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24A722A2E140DD26C0453841 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					10436564583487A487D14FDB = {
+						DevelopmentTeam = 9TDJ3889AZ;
+						ProvisioningStyle = Automatic;
+					};
+					DB4C54B621123C49F16AB2A4 = {
+						DevelopmentTeam = 9TDJ3889AZ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D4E68F6135D1F95F763E4465 /* Build configuration list for PBXProject "BuzzlieTest" */;
+			developmentRegion = fr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				fr,
+			);
+			mainGroup = 788C30B24217FC6750E4D95A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5DCBDEC82F84FF6D7DA7402D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10436564583487A487D14FDB /* BuzzlieTest */,
+				DB4C54B621123C49F16AB2A4 /* BuzzlieTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E7FDDE19C2B2FF3D7DDE524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378B62BDD78285F0EDAC822E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4249748E4C5B48F6AFB7797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95AB30786B3E47A0B238776C /* ConfigCodecTests.swift in Sources */,
+				9CDE79A8A5657078A1366511 /* ConfigMapperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D4C96BD8431EE3172903EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30914E322612C204D7D8CE32 /* AppSettings.swift in Sources */,
+				92AA42259A15F4C89BB6ED79 /* Banner.swift in Sources */,
+				7A5A88F476241E4DB26A7DC7 /* BatteryRing.swift in Sources */,
+				278FEEC00537909B66913A3A /* BleModels.swift in Sources */,
+				B189439CEA3D1660469B3AF8 /* BraceletScreen.swift in Sources */,
+				9B90F9B4F46A16C2FC8CE202 /* BuzzlieApp.swift in Sources */,
+				32F315D10329830BCD6CBB61 /* BuzzlieBleManager.swift in Sources */,
+				CD476F3D81E3CDEAC045FA66 /* BuzzlieGatt.swift in Sources */,
+				ECE0B1E432BBB617750B6EAE /* BuzzlieTestApp.swift in Sources */,
+				4EFEEF56365D45C8AA68A587 /* BuzzlieViewModel.swift in Sources */,
+				6DCEB6FD9ED131B8AECE622E /* Colors.swift in Sources */,
+				503FF37914EF04F933C6E65A /* ConfigCodec.swift in Sources */,
+				30EBEE4574CD52226673D4F4 /* ConfigMapper.swift in Sources */,
+				5CF12A3ACE3BBD9F37363636 /* ConnectSheet.swift in Sources */,
+				6F07153DFBE42E0DB6F39C1C /* ConnectionBanner.swift in Sources */,
+				49ED0F631AF7E9FC8FA59C8E /* DayOfWeekPicker.swift in Sources */,
+				EF5A577DCEF4A5FC70B1D480 /* DebugScreen.swift in Sources */,
+				CFFDD5986690E809736B9D4F /* DurationSlider.swift in Sources */,
+				05911083325B3B2E7357788C /* EmptyState.swift in Sources */,
+				44BEE7D1673886B0E6CA8F01 /* InsetGroup.swift in Sources */,
+				139CB28941C1AE0B8F74EBCD /* LogConsole.swift in Sources */,
+				3AD11F84D79A0E566AA99703 /* Metrics.swift in Sources */,
+				3C4DE82F926A91F5BEB266D9 /* RappelsScreen.swift in Sources */,
+				16A3642FE11C3E00943EF35F /* ReminderCard.swift in Sources */,
+				813F9172DB4C4A082FDDB35E /* ReminderEditorSheet.swift in Sources */,
+				95D22A7EC9EDC9A7E3EEBBFD /* ReminderStore.swift in Sources */,
+				58053D21524B307831260A01 /* ReminderUi.swift in Sources */,
+				B8ED8A9E882834FF0E8B75AB /* ScreenHeader.swift in Sources */,
+				CB89CC1D4861EC5016A0356A /* ScreenScaffold.swift in Sources */,
+				1DFA0A3F59898C02933D6A0E /* SegmentedControl.swift in Sources */,
+				20C90530848E7040488424BF /* StatusChips.swift in Sources */,
+				83C574C084BC608240F7F514 /* Time.swift in Sources */,
+				A7F75C00EDE676CE0FEA6CA6 /* Typography.swift in Sources */,
+				F3B028C64F69068E6C4852FA /* VibrationPreset.swift in Sources */,
+				E4123380E90B0B9EE82D6D25 /* WheelPicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A4E6DB0ED96CDF19A8D84C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10436564583487A487D14FDB /* BuzzlieTest */;
+			targetProxy = 9C88B1B183A19B962475D51A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		72AFEA65B4C84E8A5053637E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9TDJ3889AZ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		78F815EC0F868D3841B9FADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BUZZLIE;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "BUZZLIE utilise le Bluetooth pour communiquer avec votre bracelet.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.buzzlie.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AE59A34ED201E26E1D0A92B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9TDJ3889AZ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BAE7309280B98F7C8BB08B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BUZZLIE;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "BUZZLIE utilise le Bluetooth pour communiquer avec votre bracelet.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.buzzlie.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DCC79F60D1974D3B0EDB1554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.buzzlie.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuzzlieTest.app/BuzzlieTest";
+			};
+			name = Release;
+		};
+		F2A7E929A5EF5DA375F7F2D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.buzzlie.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuzzlieTest.app/BuzzlieTest";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		010EBFB4AE28F9C66757DD21 /* Build configuration list for PBXNativeTarget "BuzzlieTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78F815EC0F868D3841B9FADB /* Debug */,
+				BAE7309280B98F7C8BB08B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D4E68F6135D1F95F763E4465 /* Build configuration list for PBXProject "BuzzlieTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE59A34ED201E26E1D0A92B8 /* Debug */,
+				72AFEA65B4C84E8A5053637E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EF85B214F0BF9AE67C9AC0A3 /* Build configuration list for PBXNativeTarget "BuzzlieTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A7E929A5EF5DA375F7F2D3 /* Debug */,
+				DCC79F60D1974D3B0EDB1554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24A722A2E140DD26C0453841 /* Project object */;
+}

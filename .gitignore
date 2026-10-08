@@ -33,6 +33,3 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
-
-# XcodeGen (regenerable from project.yml)
-*.xcodeproj
